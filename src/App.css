@@ -1,0 +1,156 @@
+/* Reset some default styles */
+html,body {
+margin: 0;
+}
+body {
+
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+/* Center the app container */
+.app-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Navbar styling */
+.navbar {
+  
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  width: 100%;
+  background-color: #000000;
+  padding: 20px 0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  display: inline;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+  color: #83dcf7;
+}
+
+/* Centering content */
+.content {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: 50px;
+  max-width: 600px;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Buttons and inputs styling */
+input[type="text"] {
+  width: 100%;
+  max-width: 1000px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.input{
+  width: 600px;
+  padding: 10px;
+}
+button {
+  padding: 10px 20px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Page title styling */
+h2 {
+  align-items: center;
+  
+  font-family:smooch-sans;
+  font-size: 40px;
+  margin: 100px;
+  color: #333;
+}
+/* Loading spinner styles */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.spinner {
+  border: 4px solid #f3f3f3; /* Light grey */
+  border-top: 4px solid #007bff; /* Blue */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/* Styling for the response card */
+.response-card {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.response-card h3 {
+  font-size: 20px;
+  color: #007bff;
+  text-align: center;
+}
+
+.response-card p {
+  font-size: 18px;
+  color: #333;
+  text-align: center;
+}
