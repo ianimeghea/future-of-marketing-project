@@ -4,21 +4,22 @@ import axios from "axios";
 const Chatbot = () => {
   const [message, setMessage] = useState("");
   const [response, setResponse] = useState("");
-  const [loading, setLoading] = useState(false); // Track loading state
+  const [loading, setLoading] = useState(false);
   const [selectedPerson, setSelectedPerson] = useState("Socrates");
+  const [customPerson, setCustomPerson] = useState(""); // For custom person input
 
   const people = [
     "Socrates",
     "Plato",
-    "Ada Lovelace",
+    "Don Draper",
     "Alan Turing",
-    "Marie Curie",
     "Nikola Tesla",
     "Leonardo da Vinci",
     "Steve Jobs",
     "Albert Einstein",
-    'Bill Gates',
+    "Bill Gates",
     "Marco Polo",
+    "Choose Your Own", // New option for custom person
   ];
 
   const handleSendMessage = async () => {
@@ -26,7 +27,7 @@ const Chatbot = () => {
     try {
       const res = await axios.post("http://127.0.0.1:5000/chat", {
         message: message,
-        person: selectedPerson,
+        person: selectedPerson === "Choose Your Own" ? customPerson : selectedPerson,
       });
       setResponse(res.data.reply);
     } catch (error) {
@@ -61,6 +62,25 @@ const Chatbot = () => {
         </select>
       </div>
 
+      {/* Show custom person input if "Choose Your Own" is selected */}
+      {selectedPerson === "Choose Your Own" && (
+        <div>
+          <input
+            type="text"
+            value={customPerson}
+            onChange={(e) => setCustomPerson(e.target.value)}
+            placeholder="Enter a name..."
+            style={{
+              marginBottom: "15px",
+              padding: "8px",
+              width: "300px",
+              borderRadius: "5px",
+              fontSize: "16px",
+            }}
+          />
+        </div>
+      )}
+
       <div className="input">
         <input
           type="text"
@@ -82,6 +102,7 @@ const Chatbot = () => {
             padding: "10px 20px",
             fontSize: "16px",
             color: "white",
+            background: "#6c63ff",
             border: "none",
             cursor: "pointer",
             borderRadius: "5px",

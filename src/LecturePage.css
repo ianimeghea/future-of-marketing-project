@@ -1,0 +1,167 @@
+/* General Layout */
+.lecture-page {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background: #f9f9f9;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+section {
+  padding: 20px;
+  margin-bottom: 50px;
+  margin-top: 20px;
+  width: 150%;
+  max-width: 1200px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  background: linear-gradient(135deg, #6c63ff, #00c9ff);
+  color: white;
+  padding: 50px;
+  border-radius: 10px;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+/* Insights Section with Side-by-Side Cards */
+.insights-section {
+  text-align: center;
+}
+
+.insights-container {
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  flex-wrap: wrap; /* Ensures cards adjust for smaller screens */
+}
+
+.insight-card {
+  flex: 0 1 calc(25% - 20px); /* Adjust width to fit four cards in a row */
+  background: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 300px;
+  margin-bottom: 20px;
+  
+}
+
+.insight-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .insight-card {
+    flex: 0 1 calc(50% - 20px); /* Two cards per row for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .insight-card {
+    flex: 0 1 calc(100% - 20px); /* Single card per row for small screens */
+  }
+}
+
+/* Timeline Section */
+.timeline-section {
+  text-align: center;
+}
+
+.timeline {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping for responsive design */
+  gap: 20px;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.timeline-item {
+  flex: 0 1 calc(30% - 20px); /* Adjust width to show 3 items in a row */
+  background: #e0f7fa;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: left;
+  transition: background 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item:hover {
+  background: #b2ebf2;
+}
+
+.timeline-item h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.timeline-item p {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .timeline-item {
+    flex: 0 1 calc(45% - 20px); /* Two items per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-item {
+    flex: 0 1 calc(100% - 20px); /* One item per row on very small screens */
+  }
+}
+
+
+/* Actionable Ideas Section */
+.actionable-section {
+  background: #fbe9e7;
+  border: 2px dashed #ffab91;
+  border-radius: 10px;
+}
+
+.actionable-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.actionable-section li {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+/* Reflection Section */
+.reflection-section {
+  text-align: center;
+  background: #dcedc8;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.reflection-section p {
+  font-size: 1.2rem;
+  font-style: italic;
+}

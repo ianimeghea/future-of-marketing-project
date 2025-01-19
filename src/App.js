@@ -11,10 +11,10 @@ const App = () => {
         <nav className="navbar">
           <ul className="navbar-links">
             <li>
-              <Link to="/">Lecture Information</Link>
+              <Link to="/">Course Ideas</Link>
             </li>
             <li>
-              <Link to="/chatbot">Chatbot</Link>
+              <Link to="/chatbot">Chat</Link>
             </li>
           </ul>
         </nav>
